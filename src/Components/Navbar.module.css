@@ -1,0 +1,31 @@
+*{
+    border: 0;
+
+}
+
+.icons{
+    display: flex;
+    justify-content: flex-end;
+    gap: 45px;
+}
+.homeContainer{
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid black ;
+    margin-top: 30px;
+}
+.homeContainer h2{
+    font-weight: 300px;
+}
+
+
+.mall{
+    width: 45%;
+}
+.homeContainer button{
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+}
