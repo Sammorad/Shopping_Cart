@@ -7,8 +7,16 @@ export const TotalPrice = (cart) => {
 }
 const CartReducer = (state, action) =>{
     switch(action.type){
-        case "Add":
+        case "Add":{
+            const exists = state.find(p => p.id === action.product.id)
+            if(exists){
+                return state.map(p =>
+                    p.id === action.product.id? { ...p, quantity: p.quantity + 1} : p
+                )
+            }
             return [...state, action.product]
+        }
+            
 
         case "Increase":
             return state.map(product => 

@@ -9,8 +9,8 @@ import { TotalItems, TotalPrice } from "../Features/CartReducer";
 const Cart =() => {
     const {cart} =useContext(CartContext)
     return (
-        <div>
-            <div className={styles.cartItems}>
+        <div className={styles.cartItems}>
+            <div >
                 {cart.map(product =>(
                     <CartProduct product={product}/>
                 ))}

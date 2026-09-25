@@ -54,3 +54,11 @@
     background-color: beige;
     
 }
+
+.cartItems{
+    /*Layout of the entire cart*/
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+    
+}
