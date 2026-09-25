@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Product from "../Components/Products";
+import styles from '../Components/Navbar.module.css'
 
 const Shop =()=>{
     const [products, setProducts] = useState([]);
@@ -22,7 +23,7 @@ const Shop =()=>{
     if (loading) return <p>Loading</p>
     if (error) return <p>A network Error</p>
     return (
-        <div>
+        <div className ={styles.catalogue} >
             {products.map((product) =>(
                     <Product product ={product}/>
             ))}
