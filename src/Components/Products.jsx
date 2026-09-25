@@ -12,11 +12,7 @@ const Product =({product}) =>{
            <div className={styles.productImage}> <img src={product.image} alt="" /></div>
            <p>{ product.title}</p>
            <h2>${product.price}</h2>
-           <div className={styles.itemButtons}>
-            <button><b>+</b></button>
-            <p>{quantity}</p>
-            <button><b>-</b></button>
-           </div>
+           
            <button onClick={() => dispatch({  type:"Add", product:{...product, quantity:1} })}>Add to Cart</button>
         </div>
     )
