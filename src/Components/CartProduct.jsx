@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { CartContext } from "../Features/ContextProvider";
+import styles from "./Navbar.module.css"
 
 const CartProduct =({product })=>{
     
@@ -18,12 +19,12 @@ const CartProduct =({product })=>{
 
 
     return (
-        <div>
+        <div className={styles.cartProductImg}>
             <img src={product.image} alt="" />
-            <div>
+            <div className={styles.cartImgDet}>
                 <h3>{product.title}</h3>
                 <h4>${product.price}</h4>
-                <div className="buttons">
+                <div className={styles.buttons}>
                     <button onClick={() => Decrease(product.id)}><b>-</b></button>
                     <p>{product.quantity}</p>
                     <button onClick={()=> Increase(product.id)}><b>+</b></button>

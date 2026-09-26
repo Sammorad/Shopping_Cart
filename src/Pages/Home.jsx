@@ -1,5 +1,6 @@
 import shop from '../Images/Shopping_mall.jpg'
 import styles from "../Components/Navbar.module.css"
+import { Link } from 'react-router-dom'
 
 const Home = () =>{
     return (
@@ -8,7 +9,7 @@ const Home = () =>{
                 <p>Excellent Collections</p>
                 <h2>Welcome to Your One Stop Shop</h2>
                 <p>Discover elegant designs for you and your family</p>
-                <button>Shop now</button>
+                <Link to='/shop' className={styles.shopNow}>Shop Now</Link>
             </div>
             
             <img className={styles.mall} src={shop} alt="Shopping mall image" />

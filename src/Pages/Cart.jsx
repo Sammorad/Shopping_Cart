@@ -16,6 +16,7 @@ const Cart =() => {
                 ))}
             </div>
             <div className={styles.cartSummary}>
+                <h2>Cart Summary</h2>
                 <h4>Total Items: {TotalItems(cart)} </h4>
                 <h4>Total Price: ${TotalPrice(cart)}</h4>
                 <button> CheckOut </button>
