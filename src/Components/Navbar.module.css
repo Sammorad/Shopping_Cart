@@ -1,7 +1,6 @@
-*{
-    border: 0;
+body{
+    padding: 0px;
     margin: 0px;
-
 }
 
 .icons{
@@ -50,6 +49,7 @@
 }
 .eachProduct{
     min-width: 0;
+    transition: transform 180ms ease, background-color 180ms ease;
     
     
 }
@@ -99,5 +99,15 @@
     .cartSummary{
         width: 100%;
     }
+
+}
+
+.eachProduct button{
+    width: 100%;
+    height: 2rem;
+}
+.eachProduct:hover{
+transform: scale(1.05);
+
 
 }
