@@ -1,18 +1,28 @@
 *{
     border: 0;
+    margin: 0px;
 
 }
 
 .icons{
+    /*Styling icons on the navbar*/
     display: flex;
     justify-content: flex-end;
-    gap: 45px;
+    background-color: gray;
+    margin: 0px;
+    border: 0px;
+    gap: 2rem;
+    padding: 1rem;
+    font-size: 20px;
 }
 .homeContainer{
+    /*stlying the home page*/
     display: flex;
-    justify-content: space-around;
-    border: 2px solid black ;
-    margin-top: 30px;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    
 }
 .homeContainer h2{
     font-weight: 300px;
@@ -21,6 +31,7 @@
 
 .mall{
     width: 45%;
+    height: auto;
 }
 .homeContainer button{
     background-color: black;
@@ -31,13 +42,14 @@
 }
 
 .catalogue{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+   gap: 1.5rem;
+   padding:1.5rem ;
    
 }
 .eachProduct{
-    width: 30%;
+    min-width: 0;
     
     
 }
@@ -51,7 +63,9 @@
 .productImage img{
     
     height: 300px;
+    width: 100%;
     background-color: beige;
+    object-fit: contain;
     
 }
 
@@ -59,6 +73,31 @@
     /*Layout of the entire cart*/
     display: flex;
     justify-content: space-around;
-    margin-top: 25px;
+    align-items: flex-start;
+    gap:2rem;
+    max-width: 1100px;
+    padding: 0 1 rem;
+    margin-top: 1.5rem auto;
     
+}
+
+@media(max-width:700px){
+    .icons{
+        justify-content: center;
+        gap: 1.25rem;
+    }
+
+    .homeContainer,
+    .cartItems{
+        flex-direction: column;
+    }
+
+    .mall{
+        width: 100%;
+    }
+
+    .cartSummary{
+        width: 100%;
+    }
+
 }

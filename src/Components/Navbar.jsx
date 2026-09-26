@@ -9,9 +9,9 @@ const Navbar =()=>{
     const {cart} = useContext(CartContext)
     return (
         <div className={styles.icons}>
-            <Link to="/">Home</Link>
-            <Link to="/shop">Shop</Link>
-            <Link to="/cart"><BsCart/>{cart.length}</Link>
+            <Link to="/"><b>Home</b></Link>
+            <Link to="/shop"><b>Shop</b></Link>
+            <Link to="/cart"><b><BsCart/>{cart.length}</b></Link>
         </div>
     )
 }
