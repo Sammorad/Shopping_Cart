@@ -8,12 +8,16 @@ const CartProduct =({product })=>{
 
     function Increase(id){
         const  Index = cart.findIndex(p => p.id === id)
+      
         dispatch({type: "Increase",id})
         
     }
       function Decrease(id){
         const  Index = cart.findIndex(p => p.id === id)
-        dispatch({type: "Decrease",id})
+        if (product.quantity > 1){
+            dispatch({type: "Decrease",id})
+        }
+
         
     }
 

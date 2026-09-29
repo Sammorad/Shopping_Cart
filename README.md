@@ -1,16 +1,41 @@
-# React + Vite
+# Shopping Cart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React shopping cart application built with Vite. Browse products, add them to your cart, adjust quantities, and view the cart totals.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Home, shop, and cart pages with client-side navigation.
+- Product listings loaded from the [Fake Store API](https://fakestoreapi.com/).
+- Add and remove products, increase quantities, and decrease quantities without going below one.
+- Cart summary showing the item count and total price.
+- Responsive styling with CSS modules.
 
-## React Compiler
+Cart contents are held in React state and are cleared when the page is reloaded. The checkout button is currently a placeholder and does not complete a purchase.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Getting Started
 
-## Expanding the ESLint configuration
+Install [Node.js](https://nodejs.org/) and npm, then run:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev
+```
+
+Open the local URL printed by Vite. The shop needs an internet connection to retrieve products from Fake Store API.
+
+## Available Scripts
+
+- `npm run dev` starts the local development server.
+- `npm run build` creates a production build in `dist/`.
+- `npm run preview` serves the production build locally.
+- `npm run lint` runs ESLint.
+
+## Project Structure
+
+```text
+src/
+	Components/  Shared UI components
+	Features/    Cart context and reducer
+	Images/      Local image assets
+	Pages/       Home, shop, and cart pages
+```

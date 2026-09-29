@@ -25,7 +25,7 @@ const CartReducer = (state, action) =>{
 
         case "Decrease":
               return state.map(product => 
-                product.id ===action.id? {...product, quantity: product.quantity - 1}: product
+                product.id ===action.id? {...product, quantity: Math.max(1, product.quantity - 1)}: product
             )
 
         case "Remove":
