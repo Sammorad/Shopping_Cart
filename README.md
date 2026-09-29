@@ -17,6 +17,7 @@ Cart contents are held in React state and are cleared when the page is reloaded.
 Install [Node.js](https://nodejs.org/) and npm, then run:
 
 ```bash
+npm create vite@latest
 npm install
 npm run dev
 ```
